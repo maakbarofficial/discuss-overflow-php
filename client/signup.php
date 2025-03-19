@@ -8,8 +8,8 @@
                 <div class="card-body">
                     <form>
                         <div class="mb-3">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
                         </div>
 
                         <div class="mb-3">
@@ -23,8 +23,13 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="confirmPassword" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                            <label for="role" class="form-label">Role</label>
+                            <select class="form-select" required>
+                            <option selected>Select role</option>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                            <option value="demo">Demo</option>
+                            </select>
                         </div>
 
                         <div class="d-grid">
