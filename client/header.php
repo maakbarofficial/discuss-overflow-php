@@ -11,8 +11,8 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                 <a class="nav-link" href="#">Latest</a>
                 <a class="nav-link" href="#">Catagory</a>
-                <a class="nav-link" href="#">Login</a>
-                <a class="nav-link" href="#">Register</a>
+                <a class="nav-link" href="?login=true">Login</a>
+                <a class="nav-link" href="?signup=true">SignUp</a>
             </div>
         </div>
     </div>
