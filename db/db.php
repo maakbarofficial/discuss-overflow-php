@@ -12,5 +12,5 @@ if($conn->connect_error){
   die("Database connection error" . $conn->connect_error);
 }
 
-echo "Databse connected";
+// echo "Databse connected";
 ?>
