@@ -1,20 +1,24 @@
+<?php
+include('./config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Discuss OverFlow</title>
-    <?php include('./client/common.php') ?>
+    <?php include($basePath . 'client/common.php'); ?>
 </head>
 
 <body>
-    <?php include('./client/header.php') ?>
+    <?php include($basePath . 'client/header.php'); ?>
 
     <?php
     if (isset($_GET['signup'])) {
-        include('./client/signup.php');
+        include($basePath . 'client/signup.php');
     } else if (isset($_GET['login'])) {
-        include('./client/login.php');
+        include($basePath . 'client/login.php');
     } else {
+        echo "<h2>Welcome to Discuss OverFlow!</h2>";
     }
     ?>
 </body>
