@@ -13,7 +13,4 @@ if($conn->connect_error){
 }
 
 echo "Databse connected";
-
-debug($conn);
-
 ?>
