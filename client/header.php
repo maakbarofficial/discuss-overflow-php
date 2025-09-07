@@ -8,8 +8,13 @@
                 <a href="#">Home</a>
                 <a href="#">Latest</a>
                 <a href="#">Catagory</a>
-                <a href="?login=true">Login</a>
-                <a href="?signup=true">SignUp</a>
+
+                <?php if (!isset($_SESSION["user"])) { ?>
+                    <a href="?login=true">Login</a>
+                    <a href="?signup=true">SignUp</a>
+                <?php } else { ?>
+                    <a href="?logout=true">Logout</a>
+                <?php } ?>
             </div>
         </div>
     </div>
