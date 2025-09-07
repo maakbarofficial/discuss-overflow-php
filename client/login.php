@@ -5,7 +5,7 @@
                 <h3>Login</h3>
             </div>
             <div>
-                <form>
+                <form method="POST" action="<?php echo $baseUrl ?>server/requests.php">
                     <div>
                         <label for="username">Username</label>
                         <input type="text" id="username" placeholder="Enter your username" required>
@@ -17,7 +17,7 @@
                     </div>
 
                     <div>
-                        <button type="submit">Login</button>
+                        <button type="submit" name="login">Login</button>
                     </div>
                 </form>
             </div>
