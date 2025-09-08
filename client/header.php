@@ -13,7 +13,9 @@
                     <a href="?login=true">Login</a>
                     <a href="?signup=true">SignUp</a>
                 <?php } else { ?>
-                    <a href="?logout=true">Logout</a>
+                    <form method="GET" action="<?php echo $baseUrl ?>server/requests.php" style="display: inline;">
+                        <button type="submit" name="logout">Logout</button>
+                    </form>
                 <?php } ?>
             </div>
         </div>
