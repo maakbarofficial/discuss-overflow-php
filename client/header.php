@@ -5,9 +5,9 @@
         </a>
         <div>
             <div>
-                <a href="#">Home</a>
-                <a href="#">Latest</a>
-                <a href="#">Catagory</a>
+                <a href="/doapp">Home</a>
+                <a href="?ask=true">Ask a Question</a>
+                <a href="?catagory=true">Catagory</a>
 
                 <?php if (!isset($_SESSION["user"])) { ?>
                     <a href="?login=true">Login</a>
