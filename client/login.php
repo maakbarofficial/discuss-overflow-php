@@ -8,12 +8,12 @@
                 <form method="POST" action="<?php echo $baseUrl ?>server/requests.php">
                     <div>
                         <label for="username">Username</label>
-                        <input type="text" id="username" placeholder="Enter your username" required>
+                        <input type="text" name="username" placeholder="Enter your username" required>
                     </div>
 
                     <div>
                         <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Enter your password" required>
+                        <input type="password" name="password" placeholder="Enter your password" required>
                     </div>
 
                     <div>
