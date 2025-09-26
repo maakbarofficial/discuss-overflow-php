@@ -20,8 +20,10 @@ include('./config.php');
         include($basePath . 'client/signup.php');
     } else if (isset($_GET['login']) && empty($_SESSION["user"])) {
         include($basePath . 'client/login.php');
+    } else if (isset($_GET['ask']) && isset($_SESSION["user"])) {
+        include($basePath . 'client/ask.php');
     } else {
-        echo "<h2>Welcome to Discuss OverFlow!</h2>";
+        include($basePath . 'client/home.php');
     }
     ?>
 </body>
