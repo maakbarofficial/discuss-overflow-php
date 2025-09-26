@@ -7,7 +7,7 @@
             <div>
                 <a href="/doapp">Home</a>
                 <a href="?ask=true">Ask a Question</a>
-                <a href="?catagory=true">Catagory</a>
+                <a href="?category=true">Catagory</a>
 
                 <?php if (!isset($_SESSION["user"])) { ?>
                     <a href="?login=true">Login</a>
