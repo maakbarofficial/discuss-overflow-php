@@ -2,6 +2,14 @@ CREATE DATABASE doapp;
 
 USE doapp;
 
+CREATE TABLE rate_limit (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  ip_address VARCHAR(45) NOT NULL,
+  request_count INT DEFAULT 0,
+  window_start TIMESTAMP NOT NULL,
+  UNIQUE KEY (ip_address)
+);
+
 CREATE TABLE users (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(50) NOT NULL UNIQUE,
