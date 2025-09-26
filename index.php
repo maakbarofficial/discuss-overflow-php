@@ -22,6 +22,8 @@ include('./config.php');
         include($basePath . 'client/login.php');
     } else if (isset($_GET['ask']) && isset($_SESSION["user"])) {
         include($basePath . 'client/ask.php');
+    } else if (isset($_GET['category']) && isset($_SESSION["user"])) {
+        include($basePath . 'client/category.php');
     } else {
         include($basePath . 'client/home.php');
     }

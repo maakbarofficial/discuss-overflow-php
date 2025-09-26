@@ -19,7 +19,7 @@
 
                     <div>
                         <label for="category">Category</label>
-                        <?php include("category.php"); ?>
+                        <?php include("categories.php"); ?>
                     </div>
 
                     <div>
