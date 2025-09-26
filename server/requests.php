@@ -15,7 +15,8 @@ if (isset($_POST['signup'])) {
 
   if ($success) {
     echo '<script>alert("User registered successfully")</script>';
-    $_SESSION['user'] = ["username" => $username, "email" => $email, "role" => $role];
+    $id = $conn->insert_id;
+    $_SESSION['user'] = ["id" => $id ,"username" => $username, "email" => $email, "role" => $role];
     header("Location: /doapp");
     exit();
   } else {
@@ -58,4 +59,21 @@ if (isset($_POST['signup'])) {
   session_destroy();
   header("Location: /doapp");
   exit();
+} else if (isset($_POST['ask'])) {
+  $title = $_POST['title'];
+  $description = $_POST['description'];
+  $category_id = $_POST['category'];
+  $user_id = $_SESSION['user']['id'];
+
+  $query = $conn->prepare("INSERT INTO `questions` (`title`, `description`, `category_id`, `user_id`) VALUES (?, ?, ?, ?)");
+  $query->bind_param("ssii", $title, $description, $category_id, $user_id);
+  $success = $query->execute();
+
+  if ($success) {
+    echo '<script>alert("Question added successfully")</script>';
+    header("Location: /doapp");
+    exit();
+  } else {
+    echo '<script>alert("Error while adding a question")</script>';
+  }
 }
