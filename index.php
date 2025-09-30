@@ -3,7 +3,7 @@ include('./config.php');
 include('./rate_limiter.php');
 
 // Enforce rate limit: 100 requests per hour
-rateLimiter(100, 3600);
+rateLimiter(1000, 3600);
 ?>
 <!DOCTYPE html>
 <html lang="en">
