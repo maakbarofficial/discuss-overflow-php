@@ -30,6 +30,8 @@ rateLimiter(1000, 3600);
         include($basePath . 'client/ask.php');
     } else if (isset($_GET['category']) && isset($_SESSION["user"])) {
         include($basePath . 'client/category.php');
+    } elseif (isset($_GET['questionId']) && isset($_SESSION["user"])) {
+        include($basePath . 'client/edit_question.php');
     } else {
         include($basePath . 'client/home.php');
     }

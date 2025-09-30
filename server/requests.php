@@ -76,4 +76,25 @@ if (isset($_POST['signup'])) {
   } else {
     echo '<script>alert("Error while adding a question")</script>';
   }
+} else if (isset($_POST['update_question'])) {
+  $id = intval($_POST['id']);
+  $title = $_POST['title'];
+  $description = $_POST['description'];
+  $category_id = $_POST['category'];
+  $user_id = $_SESSION['user']['id'];
+
+  $stmt = $conn->prepare("
+      UPDATE questions 
+      SET title = ?, description = ?, category_id = ?
+      WHERE id = ? AND user_id = ?
+  ");
+  $stmt->bind_param("ssiii", $title, $description, $category_id, $id, $user_id);
+  $success = $stmt->execute();
+  if ($success) {
+    echo '<script>alert("Question updated successfully")</script>';
+    header("Location: /doapp?questions=true");
+    exit();
+  } else {
+    echo '<script>alert("Error while adding a question")</script>';
+  }
 }

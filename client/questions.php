@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . htmlspecialchars($row['created_at']) . "</td>";
         echo "<td>" . htmlspecialchars($row['updated_at']) . "</td>";
         if ($user["id"] == $row["user_id"]) {
-            echo "<td>" . "<button>Edit</button>" . "</td>";
+            echo "<td><a href='?questionId=$id'><button>Edit</button></a></td>";
             echo "<td>" . "<button>Delete</button>" . "</td>";
         }
         echo "</tr>";
