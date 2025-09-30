@@ -24,6 +24,8 @@ rateLimiter(100, 3600);
         include($basePath . 'client/signup.php');
     } else if (isset($_GET['login']) && empty($_SESSION["user"])) {
         include($basePath . 'client/login.php');
+    } else if (isset($_GET['questions']) && isset($_SESSION["user"])) {
+        include($basePath . 'client/questions.php');
     } else if (isset($_GET['ask']) && isset($_SESSION["user"])) {
         include($basePath . 'client/ask.php');
     } else if (isset($_GET['category']) && isset($_SESSION["user"])) {

@@ -6,6 +6,7 @@
         <div>
             <div>
                 <a href="/doapp">Home</a>
+                <a href="?questions=true">Questions</a>
                 <a href="?ask=true">Ask a Question</a>
                 <a href="?category=true">Catagory</a>
 
